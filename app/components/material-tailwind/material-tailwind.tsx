@@ -1,6 +1,9 @@
 'use client'
 
 import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
   Navbar,
   Collapse,
   Typography,
@@ -16,11 +19,17 @@ import {
   ListItemPrefix,
   ListItemSuffix,
   Avatar,
+  CardHeader,
   Card,
-  CardBody
+  CardBody,
+  CardFooter,
+  Carousel
 } from "@material-tailwind/react";
 
 export {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
   Navbar,
   Collapse,
   Typography,
@@ -36,6 +45,9 @@ export {
   ListItemPrefix,
   ListItemSuffix,
   Avatar,
+  CardHeader,
   Card,
-  CardBody
+  CardBody,
+  CardFooter,
+  Carousel
 }
