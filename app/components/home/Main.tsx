@@ -20,6 +20,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Features from "./Features";
+import OurSolution from "./OurSolution";
+import { FooterWithSocialLinks } from "./Footer";
 
 type OurServices = {
   image: string;
@@ -330,6 +332,12 @@ function Main() {
       <section className="w-screen h-screen flex flex-col items-center justify-center bg-purple-900 text-white">
         <Features featureList={featureList2} />
       </section>
+      <section className="w-screen h-screen flex flex-col items-center justify-center text-white">
+            <OurSolution />
+      </section>
+      <footer>
+        <FooterWithSocialLinks />
+      </footer>
     </>
   );
 }

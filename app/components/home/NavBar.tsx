@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import {
   Navbar,
@@ -20,85 +20,34 @@ import {
   CubeTransparentIcon,
   Bars3Icon,
   XMarkIcon,
-  FlagIcon,
-  ChatBubbleOvalLeftIcon,
-  UsersIcon,
-  FolderIcon,
   Square3Stack3DIcon,
-  RocketLaunchIcon,
-  FaceSmileIcon,
-  PuzzlePieceIcon,
-  GiftIcon,
+  ComputerDesktopIcon,
+  QueueListIcon,
+  HomeIcon,
+  CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
- 
+
 const navListMenuItems = [
   {
     color: "blue",
-    icon: FlagIcon,
-    title: "About us",
-    description: "Learn about our story and our mission statement.",
+    icon: ComputerDesktopIcon,
+    title: "Aris Software",
+    description: "Learn about our software application features",
   },
   {
     color: "orange",
-    icon: ChatBubbleOvalLeftIcon,
-    title: "Press",
-    description: "News and writings, press releases, and resources",
-  },
-  {
-    color: "green",
-    icon: UsersIcon,
-    title: (
-      <div className="flex items-center gap-1">
-        Careers{" "}
-        <Chip
-          size="sm"
-          color="green"
-          variant="ghost"
-          value="We're hiring!"
-          className="capitalize"
-        />
-      </div>
-    ),
-    description: "We are always looking for talented people. Join us!",
-  },
-  {
-    color: "blue-gray",
-    icon: FolderIcon,
-    title: "Legal",
-    description: "All the stuff that we dan from legal made us add.",
-  },
-  {
-    color: "purple",
-    icon: RocketLaunchIcon,
-    title: "Products",
-    description: "Checkout our products that helps a startup running.",
-  },
-  {
-    color: "teal",
-    icon: FaceSmileIcon,
-    title: "Icons",
-    description: "Set of beautiful icons that you can use in your project.",
-  },
-  {
-    color: "cyan",
-    icon: PuzzlePieceIcon,
-    title: "UI Kits",
-    description: "High quality UI Kits helps you to 2x faster.",
-  },
-  {
-    color: "pink",
-    icon: GiftIcon,
-    title: "Open Source",
-    description: "List of all our open-source projects, it's all free.",
+    icon: QueueListIcon,
+    title: "Infrastructure and Security",
+    description: "We take data integrity very seriously",
   },
 ];
- 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
- 
+
   const renderItems = navListMenuItems.map(
     ({ icon, title, description }, key) => (
       <a href="#" key={key}>
@@ -125,7 +74,7 @@ function NavListMenu() {
       </a>
     )
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -143,7 +92,7 @@ function NavListMenu() {
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px]" />
-              Resources
+              Solutions
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -169,109 +118,76 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
- 
+
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-normal"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <CubeTransparentIcon className="h-[18px] w-[18px]" />
-          Blocks
-        </ListItem>
-      </Typography>
+      <Link href="/">
+        <Typography as="div" variant="small" color="blue-gray" className="font-normal">
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <HomeIcon className="h-[18px] w-[18px]" />
+            Home
+          </ListItem>
+        </Typography>
+      </Link>
       <NavListMenu />
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-normal"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <UserCircleIcon className="h-[18px] w-[18px]" />
-          Account
-        </ListItem>
-      </Typography>
+      <Link href="/pricing">
+        <Typography as="div" variant="small" color="blue-gray" className="font-normal">
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <CurrencyDollarIcon className="h-[18px] w-[18px]" />
+            Pricing
+          </ListItem>
+        </Typography>
+      </Link>
+      <Link href="#">
+        <Typography as="div" variant="small" color="blue-gray" className="font-normal">
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <UserCircleIcon className="h-[18px] w-[18px]" />
+            Contact Us
+          </ListItem>
+        </Typography>
+      </Link>
     </List>
   );
 }
- 
+
 export function NavbarWithMegaMenu() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
- 
+
   return (
     <>
-    <Navbar className="mx-auto absolute max-w-none w-full px-4 py-2 bg-opacity-100">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Material Tailwind
-        </Typography>
-        <div className="hidden lg:block">
+      <Navbar className="mx-auto absolute max-w-none w-full px-4 py-2 bg-opacity-100">
+        <div className="flex items-center justify-between text-blue-gray-900">
+          <Link href="/">
+            <Image src='/images/logo.png' alt="Potencia logo" width={250} height={100} />
+          </Link>
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
           <NavList />
-        </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm">
-            Sign Up
-          </Button>
-        </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign Up
-          </Button>
-        </div>
-      </Collapse>
-    </Navbar>
-      <header className='container w-full max-w-none h-screen flex flex-col sm:flex-row items-center justify-center pt-12 px-[5%]'>
-        <div className="container">
-            <Typography variant="h1">SOFTWARE SOLUTIONS FOR FREIGHT FORWARDERS AND WAREHOUSING</Typography>
-            <Typography variant="paragraph" className="mt-10">We create Custom Software and Logistics Solutions that help integrate all facets of your business, with technology that is 100% scalable to the growth of your business.</Typography>
-            <Link href="#" >
-              <Button className="mt-10">Get your free DEMO</Button>
-            </Link>
-        </div>
-        <div className="container">
-          <Image src="/images/reactLogo.png" height={900} width={900} alt="app image" className="hidden sm:flex" />
-        </div>
-      </header>
-      </>
+        </Collapse>
+      </Navbar>
+    </>
   );
 }

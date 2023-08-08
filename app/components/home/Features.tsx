@@ -7,7 +7,6 @@ import {
   Typography,
 } from "../material-tailwind/material-tailwind";
 import Image from "next/image";
-import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
 import { FeatureList } from "./Main";
 
 type Props = {
