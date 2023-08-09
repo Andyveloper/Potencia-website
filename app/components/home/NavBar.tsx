@@ -17,7 +17,6 @@ import {
 import {
   ChevronDownIcon,
   UserCircleIcon,
-  CubeTransparentIcon,
   Bars3Icon,
   XMarkIcon,
   Square3Stack3DIcon,
@@ -25,6 +24,7 @@ import {
   QueueListIcon,
   HomeIcon,
   CurrencyDollarIcon,
+  NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
@@ -140,6 +140,14 @@ function NavList() {
         </Typography>
       </Link>
       <Link href="#">
+        <Typography as="div" variant="small" color="blue-gray" className="font-normal">
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <NewspaperIcon className="h-[18px] w-[18px]" />
+            Blog
+          </ListItem>
+        </Typography>
+      </Link>
+      <Link href="/contact-us">
         <Typography as="div" variant="small" color="blue-gray" className="font-normal">
           <ListItem className="flex items-center gap-2 py-2 pr-4">
             <UserCircleIcon className="h-[18px] w-[18px]" />
