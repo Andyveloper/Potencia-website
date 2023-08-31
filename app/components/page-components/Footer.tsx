@@ -1,35 +1,36 @@
 'use client'
-import { Typography } from "@material-tailwind/react";
-import Image from "next/image";
-import Link from "next/link";
- 
+import React from 'react'
+import { Typography } from '@material-tailwind/react'
+import Image from 'next/image'
+import Link from 'next/link'
+
 const LINKS = [
   {
-    title: "Home",
+    title: 'Home',
     items: [
       {
         title: 'Homepage',
-        url: '/',
+        url: '/'
       }
-    ],
+    ]
   },
   {
-    title: "Solutions",
-    items: [{title:"Aris Software", url: '#'} , { title:"Infrastructure and Security", url:'#'}],
+    title: 'Solutions',
+    items: [{ title: 'Aris Software', url: '#' }, { title: 'Infrastructure and Security', url: '#' }]
   },
   {
-    title: "Company",
-    items: [{title:"Contact us", url:'#'}, {title:"News", url:"#"}],
+    title: 'Company',
+    items: [{ title: 'Contact us', url: '#' }, { title: 'News', url: '#' }]
   },
   {
-    title: "Resource",
-    items: [{title:"Blog", url:'#'}, {title:"Newsletter", url:'#'}],
-  },
-];
- 
-const currentYear = new Date().getFullYear();
- 
-export function FooterWithSocialLinks() {
+    title: 'Resource',
+    items: [{ title: 'Blog', url: '#' }, { title: 'Newsletter', url: '#' }]
+  }
+]
+
+const currentYear = new Date().getFullYear()
+
+export function FooterWithSocialLinks () {
   return (
     <footer className="relative w-full mt-10">
       <div className="mx-auto w-full max-w-7xl px-8">
@@ -45,7 +46,7 @@ export function FooterWithSocialLinks() {
                 >
                   {title}
                 </Typography>
-                {items.map(({title, url}) => (
+                {items.map(({ title, url }) => (
                   <li key={title}>
                     <Link href={url}>
                     <Typography
@@ -115,5 +116,5 @@ export function FooterWithSocialLinks() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

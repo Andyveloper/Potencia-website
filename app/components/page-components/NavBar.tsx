@@ -1,19 +1,17 @@
-"use client";
-import React from "react";
+'use client'
+import React from 'react'
 import {
   Navbar,
   Collapse,
   Typography,
-  Button,
   IconButton,
   List,
   ListItem,
   Menu,
   MenuHandler,
   MenuList,
-  MenuItem,
-  Chip,
-} from "../material-tailwind/material-tailwind";
+  MenuItem
+} from '../material-tailwind/material-tailwind'
 import {
   ChevronDownIcon,
   UserCircleIcon,
@@ -24,38 +22,40 @@ import {
   QueueListIcon,
   HomeIcon,
   CurrencyDollarIcon,
-  NewspaperIcon,
-} from "@heroicons/react/24/outline";
-import Image from "next/image";
-import Link from "next/link";
+  NewspaperIcon
+} from '@heroicons/react/24/outline'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const navListMenuItems = [
   {
-    color: "blue",
+    color: 'blue',
     icon: ComputerDesktopIcon,
-    title: "Aris Software",
-    description: "Learn about our software application features",
+    title: 'Aris Software',
+    description: 'Learn about our software application features',
+    link: '/aris-software'
   },
   {
-    color: "orange",
+    color: 'orange',
     icon: QueueListIcon,
-    title: "Infrastructure and Security",
-    description: "We take data integrity very seriously",
-  },
-];
+    title: 'Infrastructure and Security',
+    description: 'We take data integrity seriously',
+    link: '/infrastructure-and-security'
+  }
+]
 
-function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+function NavListMenu () {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, link }, key) => (
+      <Link href={link} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5`}>
+          <div className={'rounded-lg p-5'}>
             {React.createElement(icon, {
               strokeWidth: 2,
-              className: "h-6 w-6",
+              className: 'h-6 w-6'
             })}
           </div>
           <div>
@@ -71,12 +71,12 @@ function NavListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
-  );
+  )
 
   return (
-    <React.Fragment>
+    <>
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
@@ -89,20 +89,20 @@ function NavListMenu() {
             <ListItem
               className="flex items-center gap-2 py-2 pr-4"
               selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+              onClick={() => { setIsMobileMenuOpen((cur) => !cur) }}
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px]" />
               Solutions
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
+                  isMenuOpen ? 'rotate-180' : ''
                 }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
+                  isMobileMenuOpen ? 'rotate-180' : ''
                 }`}
               />
             </ListItem>
@@ -115,11 +115,11 @@ function NavListMenu() {
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
-    </React.Fragment>
-  );
+    </>
+  )
 }
 
-function NavList() {
+function NavList () {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Link href="/">
@@ -139,7 +139,7 @@ function NavList() {
           </ListItem>
         </Typography>
       </Link>
-      <Link href="#">
+      <Link href="/blog">
         <Typography as="div" variant="small" color="blue-gray" className="font-normal">
           <ListItem className="flex items-center gap-2 py-2 pr-4">
             <NewspaperIcon className="h-[18px] w-[18px]" />
@@ -156,22 +156,22 @@ function NavList() {
         </Typography>
       </Link>
     </List>
-  );
+  )
 }
 
-export function NavbarWithMegaMenu() {
-  const [openNav, setOpenNav] = React.useState(false);
+export function NavbarWithMegaMenu () {
+  const [openNav, setOpenNav] = React.useState(false)
 
   React.useEffect(() => {
     window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
+      'resize',
+      () => { window.innerWidth >= 960 && setOpenNav(false) }
+    )
+  }, [])
 
   return (
     <>
-      <Navbar className="mx-auto absolute max-w-none w-full px-4 py-2 bg-opacity-100">
+      <Navbar className="mx-auto absolute max-w-none w-full px-20 py-2 bg-opacity-100">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link href="/">
             <Image src='/images/logo.png' alt="Potencia logo" width={250} height={100} />
@@ -183,13 +183,15 @@ export function NavbarWithMegaMenu() {
             variant="text"
             color="blue-gray"
             className="lg:hidden"
-            onClick={() => setOpenNav(!openNav)}
+            onClick={() => { setOpenNav(!openNav) }}
           >
-            {openNav ? (
+            {openNav
+              ? (
               <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-            ) : (
+                )
+              : (
               <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-            )}
+                )}
           </IconButton>
         </div>
         <Collapse open={openNav}>
@@ -197,5 +199,5 @@ export function NavbarWithMegaMenu() {
         </Collapse>
       </Navbar>
     </>
-  );
+  )
 }

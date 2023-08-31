@@ -1,34 +1,40 @@
-import React from "react";
+import React from 'react'
 import {
   Card,
   List,
   ListItem,
   ListItemPrefix,
-  Typography,
-} from "../material-tailwind/material-tailwind";
-import Image from "next/image";
-import { FeatureList } from "./Main";
+  Typography
+} from '../material-tailwind/material-tailwind'
+import Image from 'next/image'
+import { type FeatureList } from '@/app/constants/constants'
 
-type Props = {
-featureList: FeatureList[]
-};
+interface Props {
+  featureList: FeatureList[]
+}
 
-function Features({featureList}: Props) {
-  
+let uniqueID = 0
 
+const getKey = () => {
+  uniqueID += 1
+  return uniqueID.toString()
+}
+
+function Features ({ featureList }: Props) {
   return (
     <>
 
       {featureList.map((feature) => (
         <>
-          {!feature.inverse ? (
-            <div className="flex items-center sm:flex-row flex-col justify-center container">
-              <div className="hidden md:flex container w-1/5 md:w-[100%] sm:h-[100%] items-center justify-center">
+          {!feature.inverse
+            ? (
+            <div className="sm:mb-3 flex items-center sm:flex-row flex-col justify-center container">
+              <div className="hidden md:flex container w-1/5 md:w-[30%] md:h-[30%] 2xl:w-[35%] 3xl:h-[100%] items-center justify-center mr-9">
                 <Image
-                  src="/images/reactLogo.png"
+                  src={feature.image}
                   alt="our history image"
-                  height={600}
-                  width={600}
+                  height={400}
+                  width={500}
                 />
               </div>
               <div className="container sm:text-center md:text-left w-11/12">
@@ -41,12 +47,12 @@ function Features({featureList}: Props) {
                 >
                   {feature.description}
                 </Typography>
-                <Card className=" w-11/12 sm:w-96 overflow-hidden rounded-md">
-                  <List className="my-3 p-0">
+                <Card className=" w-12/12 overflow-hidden rounded-md my-3">
+                  <List className="my-1 sm:my-3 p-0">
                     {feature.elements.map((element) => (
                       <ListItem
-                        className="group rounded-none py-1.5 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
-                        key={feature.title}
+                        className="group rounded-none py-1 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
+                        key={getKey()}
                       >
                         <ListItemPrefix>
                           <svg
@@ -71,8 +77,9 @@ function Features({featureList}: Props) {
                 </Card>
               </div>
             </div>
-          ) : (
-            <div className="flex items-center sm:flex-row flex-col justify-center container">
+              )
+            : (
+            <div className="3xl:mt-9 flex items-center sm:flex-row flex-col justify-center container">
               <div className="container sm:text-center md:text-left w-11/12">
                 <Typography variant="h3" className="text-sm lg:text-3xl mt-2">
                   {feature.title}
@@ -83,12 +90,12 @@ function Features({featureList}: Props) {
                 >
                   {feature.description}
                 </Typography>
-                <Card className="w-12/12 overflow-hidden rounded-md">
-                  <List className="my-3 p-0">
+                <Card className="w-12/12 overflow-hidden rounded-md my-3">
+                  <List className="my-1 sm:my-3 p-0">
                     {feature.elements.map((element) => (
                       <ListItem
-                        className="group rounded-none py-1.5 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
-                        key={feature.title}
+                        className="group rounded-none py-1 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
+                        key={getKey()}
                       >
                         <ListItemPrefix>
                           <svg
@@ -112,20 +119,20 @@ function Features({featureList}: Props) {
                   </List>
                 </Card>
               </div>
-              <div className="hidden md:flex container w-1/5 md:w-[100%] sm:h-[100%] items-center justify-center">
+              <div className="hidden md:flex container ml-9 w-1/5 md:w-[30%] md:h-[30%] 2xl:w-[35%] 3xl:h-[100%] items-center justify-center">
                 <Image
-                  src="/images/reactLogo.png"
+                  src={feature.image}
                   alt="our history image"
-                  height={600}
-                  width={600}
+                  height={400}
+                  width={500}
                 />
               </div>
             </div>
-          )}
+              )}
         </>
       ))}
     </>
-  );
+  )
 }
 
-export default Features;
+export default Features

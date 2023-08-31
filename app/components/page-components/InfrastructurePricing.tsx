@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react'
 import {
   Button,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
-  Typography,
-} from "../material-tailwind/material-tailwind";
+  Typography
+} from '../material-tailwind/material-tailwind'
+import { INFRASTRUCTURE_PRICING_ELEMENTS } from '@/app/constants/constants'
 
-function CheckIcon() {
+function CheckIcon () {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,45 +25,18 @@ function CheckIcon() {
         d="M4.5 12.75l6 6 9-13.5"
       />
     </svg>
-  );
+  )
 }
 
-function Pricing() {
-  const pricingElements = [
-    {
-      title: "Plan Starter",
-      priceDescription: 0,
-      features: ["1 User", "Support", "Hosting", "Upgrades and Updates"],
-      recurrence: "/mo/user",
-    },
-    {
-      title: "Plan Standard",
-      priceDescription: 129.99,
-      features: ["2 Users minimum", "Electronic Documents", "Support", "Hosting", "Upgrades and Updates"],
-      recurrence: "/mo/user",
-    },
-    {
-      title: "Plan Professional",
-      priceDescription: 119.99,
-      features: ["5 Users minimum", "Electronic Documents", "Support", "Hosting", "Upgrades and Updates"],
-      recurrence: "/mo/user",
-    },
-    {
-      title: "Enterprise",
-      priceDescription: "Quote",
-      features: ["Unlimited Users", "Electronic Documents", "Support", "Hosting", "Upgrades and Updates"],
-      recurrence: "One time payment",
-    },
-  ];
-
+function Pricing () {
   return (
     <div className="flex items-center lg:flex-row md:columns-2 flex-col justify-center container gap-2 h-full">
-      {pricingElements.map(({title, priceDescription,features, recurrence})=> ( 
+      {INFRASTRUCTURE_PRICING_ELEMENTS.map(({ title, priceDescription, features, recurrence }) => (
         <Card
         key={title}
         color="blue"
         variant="gradient"
-        className="w-full h-full max-h-[30rem] max-w-[20rem] p-8"
+        className="w-full h-full max-h-[40rem] max-w-[20rem] p-8"
       >
         <CardHeader
           floated={false}
@@ -82,7 +56,7 @@ function Pricing() {
             color="white"
             className="mt-6 flex justify-center gap-1 text-7xl font-normal"
           >
-            <span className="mt-2 text-3xl">$</span><span className="text-5xl">{priceDescription}{" "}</span>
+            <span className="mt-2 text-3xl">$</span><span className="text-5xl">{priceDescription}{' '}</span>
             <span className="self-end text-base">{recurrence}</span>
           </Typography>
         </CardHeader>
@@ -98,8 +72,7 @@ function Pricing() {
             </li>
             </>
             ))}
-            
-            
+
           </ul>
         </CardBody>
         <CardFooter className="mt-12 p-0">
@@ -115,9 +88,9 @@ function Pricing() {
         </CardFooter>
       </Card>
       ))}
-      
+
     </div>
-  );
+  )
 }
 
-export default Pricing;
+export default Pricing
