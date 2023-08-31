@@ -487,3 +487,54 @@ export const INFRASTRUCTURE_PRICING_ELEMENTS = [
     recurrence: '/year'
   }
 ]
+
+export const INFRASTRUCTURE_AND_SECURITY = [
+  {
+    title: 'Server Administration',
+    image: '/images/1x-hosting-icon-05-64efe86ec6076.webp',
+    description: 'Server administration involves overseeing servers and networks to ensure they work well and safely. This includes routine tasks during business hours and more complex ones outside those times. The server administrator manages, optimizes, monitors, and troubleshoots servers and related parts.'
+  },
+  {
+    title: 'Hosting Services',
+    image: '/images/1x-hosting-icon-034-64efefead3488.webp',
+    description: 'Hosting service involves renting space on a virtual server to run your application and store its data. This ensures global access to your app and its content anytime. The provider manages server functions and delivers information to user devices.'
+  },
+  {
+    title: 'Safe and Secure',
+    image: '/images/1x-hosting-icon-04-64efe86e44e0b.webp',
+    description: 'An SSL certificate verifies a website\'s identity and enables secure, encrypted connections. SSL (Secure Sockets Layer) safeguards data between a web server and browser. Without it, hackers can access and expose sensitive business information from the website.'
+  },
+  {
+    title: 'Dedicated Support',
+    image: '/images/1x-hosting-big-icon-02-64efe86e3d905.webp',
+    description: 'Our specialized team is dedicated to serving the logistics industry by providing valuable assistance for your application. We excel in upgrades, maintenance, and ongoing support, ensuring your system functions seamlessly. Count on us to understand your unique needs and deliver tailored solutions that keep your logistics operations running smoothly.'
+  }
+]
+
+export const INFRASTRUCTURE_OUR_SERVICES = [
+  {
+    title: 'Application server maintenance and updating',
+    description: '',
+    image: '/images/servers-64eff8971e8dc.webp'
+  },
+  {
+    title: 'Backup program',
+    description: '',
+    image: '/images/cloud-64eff8963dcaa.webp'
+  },
+  {
+    title: 'Server monitoring',
+    description: '',
+    image: '/images/database-storage-64eff896ab884.webp'
+  },
+  {
+    title: 'Performance optimization',
+    description: '',
+    image: '/images/database-management-64eff8963cac9.webp'
+  },
+  {
+    title: 'Implementation of security barriers against cyber-attacks',
+    description: '',
+    image: '/images/hacker-64eff896ce254.webp'
+  }
+]
