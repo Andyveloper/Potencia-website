@@ -61,14 +61,22 @@ ul, ol, li, a {
   list-style: none;
 }
 
-.hero_text_pulse {
-  animation: color 10s infinite;  
+.home_background {
+  background-image: url("/images/background-yellow.webp")
 }
 
-@keyframes color {
-  0% { color: #ffffff}
-  25% { color: #ff3dff}
-  50% { color: #55ffe1}
-  75% { color: #a6fd29}
-  100% { color: #ffffff}
+.pricing_background {
+  background-image: url("/images/austin-distel-jpHw8ndwJ_Q-unsplash.webp")
+}
+
+.contact-us_background {
+  background-image: url("/images/pexels-mikhail-nilov-7682340.webp")
+}
+
+.aris-software_background {
+  background-image: url("/images/dashboards-crm-64edfbfcb73fd.webp")
+}
+
+.infrastructure-and-security_background {
+  background-image: url("/images/taylor-vick-m5tzztfcofs-unsplash-64efd6120e3b9.webp")
 }

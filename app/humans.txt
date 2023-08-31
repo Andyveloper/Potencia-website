@@ -1,0 +1,47 @@
+/* BACKGROUND IMAGES */
+Pricing page background
+Author: Austin Distel
+Website: https://unsplash.com/@austindistel
+
+Contact us background
+Author: Mikhail Nilov 
+Website: https://www.pexels.com/@mikhail-nilov/
+
+Infrastructure and security background
+Author: Taylor Vick
+Website: https://unsplash.com/@tvick
+
+/* SECTION IMAGES */
+Our history section image
+Author: fauxels
+Website: https://www.pexels.com/@fauxels/
+
+/* ACCORDION IMAGES */
+Image 1
+Author: Carloz Muza
+Website: https://unsplash.com/@kmuza
+
+Image 2
+Author: Domenico Loia 
+Website: https://unsplash.com/@domenicoloia
+
+Image 3
+Author: Joseph Frank
+Website: https://unsplash.com/@josephgruenthal
+
+Image 4
+Author: Mourizal Zativa
+Website: https://unsplash.com/@mourimoto
+
+Image 5
+Author: Dimitri Karastelev
+Website: https://unsplash.com/@dkfra19
+
+Image 6
+Author: Mart Production
+Website: https://www.pexels.com/@mart-production/
+
+Image 7
+Author: Brooke Cagle
+Website: https://unsplash.com/@brookecagle
+
