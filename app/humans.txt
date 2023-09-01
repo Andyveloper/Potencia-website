@@ -16,6 +16,16 @@ Our history section image
 Author: fauxels
 Website: https://www.pexels.com/@fauxels/
 
+Aris Software page images:
+Author: Kaique Rocha
+Website: https://www.pexels.com/@hikaique/
+
+Author: Tiger Lily
+Website: https://www.pexels.com/@tiger-lily/
+
+Author: Tima Miroshnichenko
+Website: https://www.pexels.com/@tima-miroshnichenko/
+
 /* ACCORDION IMAGES */
 Image 1
 Author: Carloz Muza

@@ -82,7 +82,7 @@ function ArisSoftwareMain () {
         <div className="flex items-center sm:flex-row flex-col justify-center container py-8">
           <div className="container sm:text-center md:text-left w-11/12 hidden lg:flex justify-center items-center">
             <Image
-              src="/images/young-freelance-worker-drinking-coffee-while-working-laptop-home-64ee6b80c89a7.webp"
+              src="/images/pexels-tima-miroshnichenko-6169054-64f14a78f1f64.webp"
               width={500}
               height={500}
               alt="aris software image"
@@ -120,7 +120,7 @@ function ArisSoftwareMain () {
           </div>
           <div className="container sm:text-center md:text-left w-11/12 hidden lg:flex rounded-3xl justify-center items-center">
             <Image
-              src="/images/cool-handsome-redhead-man-smiling-with-confidence-cross-arms-chest-looking-happy-unbothered-standing-casual-relaxed-pose-against-white-background-64ee66aeec4d2.webp"
+              src="/images/pexels-tiger-lily-4484045-64f14a76a35f9.webp"
               width={500}
               height={500}
               alt="aris software image"
@@ -133,7 +133,7 @@ function ArisSoftwareMain () {
         <div className="flex items-center sm:flex-row flex-col justify-center container py-16">
           <div className="container sm:text-center md:text-left w-11/12 hidden lg:flex justify-center items-center">
             <Image
-              src="/images/surprised-playful-touched-good-looking-african-american-woman-glasses-stylish-brown-t-shirt-clasping-hands-smiling-from-joy-excitement-liking-great-show-64ee66b183107.webp"
+              src="/images/pexels-kaique-rocha-379964-64f14a76a7ea8.webp"
               width={500}
               height={500}
               alt="aris software image"

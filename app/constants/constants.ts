@@ -380,7 +380,7 @@ export const ARIS_SAAS = [
 
 export const ARIS_OTHER_SERVICES = [
   {
-    title: 'Electronic Invoicement',
+    title: 'Electronic Invoicing',
     description: 'Integration with tax information technology providers'
   },
   {
