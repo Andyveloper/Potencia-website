@@ -174,7 +174,7 @@ export function NavbarWithMegaMenu () {
       <Navbar className="mx-auto absolute max-w-none w-full px-20 py-2 bg-opacity-100">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link href="/">
-            <Image src='/images/logo.png' alt="Potencia logo" width={250} height={100} />
+            <Image src='/images/logo.png' alt="Potencia logo" width={200} height={200} />
           </Link>
           <div className="hidden lg:block">
             <NavList />

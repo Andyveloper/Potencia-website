@@ -15,6 +15,7 @@ import Features from './Features'
 import OurSolution from './OurSolution'
 import { FooterWithSocialLinks } from './Footer'
 import { HOME_OUR_SERVICES, HOME_IMPLEMENTATION_ROADMAP, HOME_FEATURE_LIST, HOME_FEATURE_LIST_2 } from '@/app/constants/constants'
+import DialogDefault from './Dialog'
 
 function Main () {
   return (
@@ -61,7 +62,7 @@ function Main () {
               alt="rocket going to space"
               className="hidden md:flex"
             />
-            <Link href="#">
+            <Link href="/aris-software">
               <Button className="m-10 bg-[rgba(255,146,56,1)]">
                 Learn more
               </Button>
@@ -179,11 +180,7 @@ function Main () {
             understanding of various business domains, we are well-equipped to
             consistently position you a step ahead in the competitive landscape.
           </Typography>
-          <Link href="#">
-            <Button className="mt-5 bg-[rgba(255,146,56,1)]">
-              Get a free consultation
-            </Button>
-          </Link>
+          <DialogDefault buttonText='Get a free consultation' />
         </div>
       </section>
       {/* FEATURES SECTION */}

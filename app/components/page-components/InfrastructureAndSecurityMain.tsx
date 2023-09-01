@@ -7,10 +7,8 @@ import {
   ListItemPrefix,
   List,
   ListItem,
-  Avatar,
-  Button
+  Avatar
 } from '../material-tailwind/material-tailwind'
-import Link from 'next/link'
 import { INFRASTRUCTURE_AND_SECURITY, INFRASTRUCTURE_OUR_SERVICES } from '@/app/constants/constants'
 
 function InfrastructureAndSecurityMain () {
@@ -57,7 +55,7 @@ function InfrastructureAndSecurityMain () {
         To ensure high performance and security, server administrators are responsible for completing an extensive list of tasks, such as:
         </Typography>
         <div className="container flex sm:flex-row flex-col items-center justify-center">
-          <Card className="w-11/12 md:w-1/2">
+          <Card className="w-11/12 md:w-1/2 h-[100%]">
             <List>
               {INFRASTRUCTURE_OUR_SERVICES.map((service, index) => (
                 <ListItem key={`${service.title}${index++}`}>
@@ -90,14 +88,9 @@ function InfrastructureAndSecurityMain () {
               src="/images/1x-hosting-illustration-0456-64eff71513d8b.webp"
               height={500}
               width={500}
-              alt="rocket going to space"
-              className="hidden md:flex"
+              alt="server image"
+              className="hidden md:flex w-auto"
             />
-            <Link href="#">
-              <Button className="m-10 bg-[rgba(255,146,56,1)]">
-                Learn more
-              </Button>
-            </Link>
           </div>
         </div>
       </section>

@@ -16,15 +16,15 @@ const LINKS = [
   },
   {
     title: 'Solutions',
-    items: [{ title: 'Aris Software', url: '#' }, { title: 'Infrastructure and Security', url: '#' }]
+    items: [{ title: 'Aris Software', url: '/aris-software' }, { title: 'Infrastructure and Security', url: '/infrastructure-and-security' }]
   },
   {
     title: 'Company',
-    items: [{ title: 'Contact us', url: '#' }, { title: 'News', url: '#' }]
+    items: [{ title: 'Contact us', url: '/contact-us' }, { title: 'Pricing', url: '/pricing' }]
   },
   {
     title: 'Resource',
-    items: [{ title: 'Blog', url: '#' }, { title: 'Newsletter', url: '#' }]
+    items: [{ title: 'Blog', url: '/blog' }]
   }
 ]
 
@@ -35,7 +35,7 @@ export function FooterWithSocialLinks () {
     <footer className="relative w-full mt-10">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-        <Image src='/images/logo.png' alt="Potencia logo" width={300} height={100} />
+        <Image src='/images/logo.png' alt="Potencia logo" width={200} height={200} />
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>

@@ -23,8 +23,12 @@ import {
   Card,
   CardBody,
   CardFooter,
-  Carousel
-} from "@material-tailwind/react";
+  Carousel,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter
+} from '@material-tailwind/react'
 
 export {
   Accordion,
@@ -49,5 +53,9 @@ export {
   Card,
   CardBody,
   CardFooter,
-  Carousel
+  Carousel,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter
 }

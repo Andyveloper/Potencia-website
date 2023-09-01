@@ -1,7 +1,8 @@
+'use client'
 import React from 'react'
-import { Button, Typography } from '../material-tailwind/material-tailwind'
-import Link from 'next/link'
+import { Typography } from '../material-tailwind/material-tailwind'
 import Image from 'next/image'
+import DialogDefault from './Dialog'
 
 interface Props {
   title: string
@@ -16,9 +17,8 @@ function Header ({ title, description, image, page }: Props) {
         <div className="container">
             <Typography variant="h1" className="text-white text-4xl sm:text-5xl 3xl:text-7xl">{title}</Typography>
             <Typography variant="paragraph" className="mt-10 text-white text-md sm:text-xl"> {description} </Typography>
-            <Link href="#" >
-              <Button className="mt-10 text-xl bg-[rgba(255,146,56,1)]">Get your free DEMO</Button>
-            </Link>
+
+              <DialogDefault buttonText='' />
         </div>
         <div className="container rounded-3xl">
           {(image.length > 0) && (
